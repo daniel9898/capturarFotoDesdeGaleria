@@ -1,14 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Capturar Foto
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-item >
+      <ion-label text-wrap>test</ion-label>
+      <button ion-button icon-only item-right (click)="foto(campo)">  
+        <ion-icon name="camera"></ion-icon>
+      </button>
+    </ion-item>
+    <ion-item>
+      <ion-card>    
+        <ion-card-content>           
+            <img [src]="campo.campo.valor__c" />
+        </ion-card-content>
+      </ion-card>    
+    </ion-item>
 </ion-content>
+
+
