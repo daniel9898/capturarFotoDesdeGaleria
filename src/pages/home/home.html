@@ -7,19 +7,20 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-item >
-      <ion-label text-wrap>test</ion-label>
-      <button ion-button icon-only item-right (click)="foto(campo)">  
-        <ion-icon name="camera"></ion-icon>
-      </button>
-    </ion-item>
-    <ion-item>
+
+    <button ion-button block icon-end (click)="opciones()"> Pulsar 
+          <ion-icon name="camera"></ion-icon>
+    </button>
+    
+
+    <ion-item *ngIf="image != null">
       <ion-card>    
         <ion-card-content>           
-            <img [src]="campo.campo.valor__c" />
+            <img [src]="image"/>
         </ion-card-content>
       </ion-card>    
     </ion-item>
+
 </ion-content>
 
 
